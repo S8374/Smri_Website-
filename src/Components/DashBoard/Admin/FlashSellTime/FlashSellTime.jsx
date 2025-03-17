@@ -31,7 +31,7 @@ export default function FlashSellTime() {
   }, []);
 
   return (
-    <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+    <div className="grid grid-flow-col gap-5 dark:text-black text-center auto-cols-max">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div className="flex flex-col" key={unit}>
           <span className="countdown font-mono text-5xl">

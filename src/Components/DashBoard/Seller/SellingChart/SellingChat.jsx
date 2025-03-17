@@ -28,34 +28,34 @@ export default function SellingChart() {
     const totalEarnings = SellerProducts.reduce((acc, product) => acc + (product.totalSell || 0), 0);
 
     return (
-        <div className="w-full min-h-screen bg-gray-100 p-6">
+        <div className="w-full min-h-screen dark:text-black bg-gray-100 p-6">
             {/* Stats Section */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto mb-6">
                 <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                    <h3 className="text-gray-600 text-lg font-semibold">Total Sell</h3>
-                    <p className="text-2xl font-bold text-indigo-600">${totalEarnings.toLocaleString()}</p>
-                    <span className="text-gray-400 text-sm">Jan 1st - Feb 1st</span>
+                    <h3 className="text-gray-600 text-lg font-semibold dark:text-black">Total Sell</h3>
+                    <p className="text-2xl font-bold dark:text-black text-indigo-600">${totalEarnings.toLocaleString()}</p>
+                    <span className="text-gray-400 text-sm dark:text-black">Jan 1st - Feb 1st</span>
                 </div>
                 <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                    <h3 className="text-gray-600 text-lg font-semibold">Orders</h3>
-                    <p className="text-2xl font-bold text-green-600">{totalOrders}</p>
-                    <span className="text-gray-400 text-sm">↗︎ 400 (22%)</span>
+                    <h3 className="text-gray-600 text-lg font-semibold dark:text-black">Orders</h3>
+                    <p className="text-2xl font-bold dark:text-black text-green-600">{totalOrders}</p>
+                    <span className="text-gray-400 text-sm dark:text-black">↗︎ 400 (22%)</span>
                 </div>
                 <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                    <h3 className="text-gray-600 text-lg font-semibold">Current Balance</h3>
-                    <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
+                    <h3 className="text-gray-600 text-lg font-semibold dark:text-black">Current Balance</h3>
+                    <p className="text-2xl font-bold text-blue-600 dark:text-black">${totalEarnings.toLocaleString()}</p>
                     <div className="mt-3 flex justify-center gap-4">
-                        <button className="btn bg-red-500 text-white px-4 py-1 rounded">Withdraw</button>
-                        <button className="btn bg-green-500 text-white px-4 py-1 rounded">Deposit</button>
+                        <button className="btn bg-red-500 text-white px-4 dark:text-white dark:bg-black py-1 rounded">Withdraw</button>
+                        <button className="btn bg-green-500 dark:text-white dark:bg-black text-white px-4 py-1 rounded">Deposit</button>
                     </div>
                 </div>
             </div>
 
             {/* Chart Section */}
             <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-6">
-                <h2 className="text-xl font-semibold text-gray-700 mb-4">📊 Your Sales Performance</h2>
+                <h2 className="text-xl font-semibold text-gray-700 dark:text-black mb-4">📊 Your Sales Performance</h2>
                 {SellerProducts.length > 0 ? (
-                    <div className="w-full h-[450px]">
+                    <div className="w-full h-[450px] dark:text-black">
                         <ResponsiveContainer width="100%" height="100%">
                             <ComposedChart
                                 data={SellerProducts}
@@ -83,7 +83,7 @@ export default function SellingChart() {
                         </ResponsiveContainer>
                     </div>
                 ) : (
-                    <p className="text-gray-500 text-center">No products found for your account.</p>
+                    <p className="text-gray-500 text-center dark:text-black">No products found for your account.</p>
                 )}
             </div>
         </div>

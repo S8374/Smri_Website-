@@ -58,23 +58,23 @@ export default function ManageProduct() {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6">Manage Products</h1>
+    <div className="p-6 dark:text-black bg-gray-100 min-h-screen">
+      <h1 className="text-2xl dark:text-black font-bold mb-6">Manage Products</h1>
       <div className="overflow-x-auto bg-white rounded-lg shadow">
         {/* Table Container with Fixed Height and Scroll */}
         <div className="max-h-[70vh] overflow-y-auto">
           <table className="min-w-full">
-            <thead className="bg-gray-200 sticky top-0">
+            <thead className="bg-gray-200 sticky dark:text-black top-0">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Image</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Name</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Description</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Price</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Stock</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Actions</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Image</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Name</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Description</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Price</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Stock</th>
+                <th className="px-6 py-3 text-left text-xs dark:text-black font-medium text-gray-700 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y dark:text-black divide-gray-200">
               {productList.map((product) => (
                 <tr key={product._id} className="hover:bg-gray-50">
                   <td className="px-6 py-4">
@@ -86,13 +86,13 @@ export default function ManageProduct() {
                       />
                     </div>
                   </td>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{product.title}</td>
-                  <td className="px-6 py-4 text-sm text-gray-500">{product.description}</td>
-                  <td className="px-6 py-4 text-sm text-gray-900">${product.price}</td>
-                  <td className="px-6 py-4 text-sm text-gray-900">{product.total_stock}</td>
-                  <td className="px-6 py-4 relative">
+                  <td className="px-6 py-4 dark:text-black  text-sm font-medium text-gray-900">{product.title}</td>
+                  <td className="px-6 py-4 dark:text-black text-sm text-gray-500">{product.description}</td>
+                  <td className="px-6 py-4 dark:text-black text-sm text-gray-900">${product.price}</td>
+                  <td className="px-6 py-4 dark:text-black text-sm text-gray-900">{product.total_stock}</td>
+                  <td className="px-6 py-4 dark:text-black relative">
                     <button
-                      className="text-gray-500 btn btn-xs hover:text-gray-700 focus:outline-none"
+                      className="text-gray-500 btn btn-xs dark:text-black hover:text-gray-700 focus:outline-none"
                       onClick={() => toggleMenu(product._id)}
                     >
                       <BsThreeDotsVertical />
@@ -100,7 +100,7 @@ export default function ManageProduct() {
 
                     {/* Dropdown Menu */}
                     {openDropdown === product._id && (
-                      <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg z-50">
+                      <div className="absolute right-0 mt-2 w-40 dark:text-black bg-white border rounded-lg shadow-lg z-50">
                         <ul className="py-2">
                           <li>
                             <Button
@@ -144,22 +144,22 @@ export default function ManageProduct() {
       </div>
 
       {/* See Details Modal */}
-      <dialog id="my_modal_1" className="modal">
+      <dialog id="my_modal_1" className="modal dark:text-black">
         <div className="modal-box">
           {selectedProduct ? (
             <>
-              <h3 className="font-bold text-lg">{selectedProduct.title}</h3>
+              <h3 className="font-bold dark:text-black text-lg">{selectedProduct.title}</h3>
               <img
                 src={selectedProduct.images[0] || "https://via.placeholder.com/150"}
                 alt={selectedProduct.title}
                 className="w-full h-48 object-cover rounded-lg my-3"
               />
-              <p className="py-2 text-gray-700">{selectedProduct.description}</p>
-              <p className="text-lg font-semibold">Price: ${selectedProduct.price}</p>
-              <p className="text-gray-600">Stock: {selectedProduct.total_stock}</p>
-              <div className="modal-action">
+              <p className="py-2 text-gray-700 dark:text-black">{selectedProduct.description}</p>
+              <p className="text-lg font-semibold dark:text-black">Price: ${selectedProduct.price}</p>
+              <p className="text-gray-600 dark:text-black">Stock: {selectedProduct.total_stock}</p>
+              <div className="modal-action dark:text-black">
                 <form method="dialog">
-                  <button className="btn">Close</button>
+                  <button className="btn dark:text-black">Close</button>
                 </form>
               </div>
             </>
