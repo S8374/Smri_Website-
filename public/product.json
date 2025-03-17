@@ -1,0 +1,228 @@
+[
+    {
+      "title": "Elegant Red Dress",
+      "stock": "In Stock",
+      "total_stock": 50,
+      "price": 80,
+      "discount_price": 60,
+      "discount_percent": 50,
+      "description": "A beautiful red evening dress perfect for special occasions.",
+      "color": "Red",
+      "size": ["S", "M", "L", "XL"],
+      "review": [
+        {
+          "user": "Alice Johnson",
+          "review": "Absolutely stunning dress! Perfect fit.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/666638456/photo/summer-dress-isolated-on-white.jpg?s=612x612&w=0&k=20&c=njYQUFhkxRjmgWtUyX-2fNz1USjjlgIRoAow0UH33Oc=",
+        "https://media.istockphoto.com/id/1150503700/photo/beautiful-female-in-red-dress.jpg?s=612x612&w=0&k=20&c=OhyL3FvF1djqvrzXrtW9uZz3qstnmMWQuydYfGOqSrI=",
+        "https://media.istockphoto.com/id/1192948142/photo/one-person-waist-up-of-18-19-years-old-beautiful-redhead-caucasian-young-women-teenage-girls.jpg?s=612x612&w=0&k=20&c=LrmWgCGl9EXsOmvCjGY4QUZ5C3bwlIA2eI2olg2Upa0="
+      ],
+      "category": "Woman's Fashion",
+      "subcategory": "Dresses"
+    },
+    {
+      "title": "Classic Leather Wallet",
+      "stock": "In Stock",
+      "total_stock": 100,
+      "price": 50,
+      "discount_price": 40,
+      "discount_percent": 60,
+      "description": "Premium quality leather wallet for men.",
+      "color": "Brown",
+      "size": ["One Size"],
+      "review": [
+        {
+          "user": "Mark Spencer",
+          "review": "Very stylish and compact wallet.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/1330260135/photo/beautiful-leather-brown-purse-made-of-leather-to-store-paper-money.jpg?s=612x612&w=0&k=20&c=VzhyXIt3QmIuszZq0qNt6H6tqOkNRCUjHKpi_7h8ams=",
+        "https://media.istockphoto.com/id/1282490584/photo/handmade-leather-bifold-natural-full-grain-leather-wallet-purse-pouch.jpg?s=612x612&w=0&k=20&c=wZePWoaBwMUOdBBr79FZmpGrjw8eLNDKTlD2IJM_ChM=",
+        "https://media.istockphoto.com/id/1128731952/photo/closed-brown-leather-wallet-on-wooden-table.jpg?s=612x612&w=0&k=20&c=ceDDVvOz9AB1FTJrMuU2rHp7ukwxzW-YHLrL6hX0WKo="
+      ],
+      "category": "Man's Fashion",
+      "subcategory": "Accessories"
+    },
+    {
+      "title": "Running Shoes",
+      "stock": "Out of Stock",
+      "total_stock": 0,
+      "price": 120,
+      "discount_price": 90,
+      "discount_percent": 25,
+      "description": "Comfortable running shoes with excellent grip.",
+      "color": "Black",
+      "size": ["6", "7", "8", "9", "10"],
+      "review": [
+        {
+          "user": "John Doe",
+          "review": "Great shoes for daily jogging.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/2164835515/photo/closeup-of-young-asian-female-athlete-runner-tying-shoelaces-in-preparation-for-running.jpg?s=612x612&w=0&k=20&c=83C7P2e5U7kGp2QWxfDCtsTLEKALewtmFiVZ7UFt3pc=",
+        "https://media.istockphoto.com/id/1364477557/photo/a-pair-of-blue-sneakers-close-up-for-running-on-a-dark-background.jpg?s=612x612&w=0&k=20&c=RcumkQu6GEBKqsua5_bmVdH7kJ2k2bjfTywAH6IV0ms=",
+        "https://media.istockphoto.com/id/1335034722/photo/blue-kids-modern-shoes-isolated-on-blue-background-with-copy-space-on-the-right.jpg?s=612x612&w=0&k=20&c=eyfnn0QcNtkTmNp3GI1sXE8X_oZH7HDBqHxmyFxSBAs="
+      ],
+      "category": "Man's Fashion",
+      "subcategory": "Shoes"
+    },
+    {
+      "title": "Smartphone X1",
+      "stock": "In Stock",
+      "total_stock": 30,
+      "price": 999,
+      "discount_price": 899,
+      "discount_percent": 10,
+      "description": "Latest model with amazing features and camera.",
+      "color": "Blue",
+      "size": ["One Size"],
+      "review": [
+        {
+          "user": "Emily Smith",
+          "review": "Best phone I've used so far.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/2164325493/photo/father-and-daughters-chatting.jpg?s=612x612&w=0&k=20&c=q2f9xBxPspIGnunabaI1sPU7522WFgaRnrjIj2YVPrs=",
+        "https://media.istockphoto.com/id/1772845838/photo/cell-phone-with-white-screen-screen-phone-suitable-for-mock-up-woman-holding-a-cell-phone.jpg?s=612x612&w=0&k=20&c=Xq1wksRqh1TTVPR2zdYlX1EAcBrY7Zu2YJmgICm0P-4=",
+        "https://media.istockphoto.com/id/1401588228/photo/illustration-3d-render-of-isometric-rectangles-simulating-a-telephone-in-a-3d-space-with.jpg?s=612x612&w=0&k=20&c=dio9h1GTDbuKHArD3bDbuZGw0ovEXGEUlQwkanJ4IW0="
+      ],
+      "category": "Electronics",
+      "subcategory": "Mobiles"
+    },
+    {
+      "title": "Gaming Laptop",
+      "stock": "In Stock",
+      "total_stock": 25,
+      "price": 1500,
+      "discount_price": 1350,
+      "discount_percent": 10,
+      "description": "Powerful gaming laptop with high-end specs.",
+      "color": "Black",
+      "size": ["One Size"],
+      "review": [
+        {
+          "user": "Robert Brown",
+          "review": "Amazing performance for gaming.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/1878435922/photo/perspective-view-of-open-laptop.jpg?s=612x612&w=0&k=20&c=s5LTlu65glglaTH4uU0nG6FMRm4jzi6d7LJPww13TQs=",
+        "https://media.istockphoto.com/id/1437480315/photo/closeup-of-a-modern-laptop-under-the-lights-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=OnIBtiUk8O99YerJZzBwcuC0AcfurfqRHV7E490n_fA=",
+        "https://media.istockphoto.com/id/1437480315/photo/closeup-of-a-modern-laptop-under-the-lights-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=OnIBtiUk8O99YerJZzBwcuC0AcfurfqRHV7E490n_fA="
+      ],
+      "category": "Electronics",
+      "subcategory": "Laptops"
+    },
+    {
+      "title": "Ergonomic Office Chair",
+      "stock": "In Stock",
+      "total_stock": 40,
+      "price": 200,
+      "discount_price": 180,
+      "discount_percent": 10,
+      "description": "Comfortable office chair with adjustable features.",
+      "color": "Grey",
+      "size": ["One Size"],
+      "review": [
+        {
+          "user": "Michael Green",
+          "review": "Very comfortable for long working hours.",
+          "rating": 4
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/1303724260/photo/modern-black-office-chair-in-an-empty-office-against-white-wall-on-gray-carpet.jpg?s=612x612&w=0&k=20&c=1BtJXE5b0EQXkilXAzO27jV9R3jSOPxx57q54CU7kTY=",
+        "https://media.istockphoto.com/id/1134535985/photo/office-chair.jpg?s=612x612&w=0&k=20&c=BFuGrxM9hpultxQN6rUWoWs3_DQlEw4hbB-BGtAIQio=",
+        "https://media.istockphoto.com/id/1194071167/photo/the-office-chair-from-black-textile-isolated-over-white.jpg?s=612x612&w=0&k=20&c=gv6SaxP29HU2OskZ9tcDpAztOv8b9rOXCf310mS8NFI="
+      ],
+      "category": "Furniture",
+      "subcategory": "Chairs"
+    },
+    {
+      "title": "Wooden Dining Table",
+      "stock": "In Stock",
+      "total_stock": 20,
+      "price": 450,
+      "discount_price": 400,
+      "discount_percent": 11,
+      "description": "Elegant wooden dining table for family gatherings.",
+      "color": "Brown",
+      "size": ["One Size"],
+      "review": [
+        {
+          "user": "Sarah Wilson",
+          "review": "Great build quality and design.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/2050457091/photo/digital-illustration-of-chic-kitchen-dining-with-elegant-decor.jpg?s=612x612&w=0&k=20&c=y3bgXxUAJSfFMzjmGH4bxaz68C1p3ZHhsqjczxQCi0c=",
+        "https://media.istockphoto.com/id/1255869152/photo/living-room-with-window-open-to-terrace.jpg?s=612x612&w=0&k=20&c=EyPJ83qss2vUBaEBwGXKaOk4oqCXvGoccOIYzf0kmec=",
+        "https://media.istockphoto.com/id/1803245505/photo/cozy-minimal-dining-room-with-dining-table-ing-the-middle-of-the-room-with-large-window.jpg?s=612x612&w=0&k=20&c=Ivr3raFL3CPh65rNXR27gA12P0lbcnzWUbNavRteai4="
+      ],
+      "category": "Furniture",
+      "subcategory": "Tables"
+    },
+    {
+      "title": "Sports T-Shirt",
+      "stock": "In Stock",
+      "total_stock": 35,
+      "price": 25,
+      "discount_price": 20,
+      "discount_percent": 20,
+      "description": "Lightweight and breathable sports t-shirt.",
+      "color": "Blue",
+      "size": ["S", "M", "L", "XL", "XXL"],
+      "review": [
+        {
+          "user": "Chris Evans",
+          "review": "Great for workouts, very comfortable.",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/1328049157/photo/mens-short-sleeve-t-shirt-mockup-in-front-and-back-views.jpg?s=612x612&w=0&k=20&c=1_zfKF73GEFp5RtLEyQQn8ZH5UB5THiom2pBSXb9-Uw=",
+        "https://media.istockphoto.com/id/1413871474/photo/mens-t-shirts-mockup-design-template-mockup-copy-space.jpg?s=612x612&w=0&k=20&c=-qbkUygg5h85CFfpnvurtPdvYIGdP7UXFJrvVRVqVRA=",
+        "https://media.istockphoto.com/id/1481860873/photo/cotton-t-shirt-isolated.jpg?s=612x612&w=0&k=20&c=u7BWZ2OdzlJqANwHJgrYH7PM9JaqhY3fWWZgrYTvkMg="
+      ],
+      "category": "Sport & Outdoors",
+      "subcategory": "Sportswear"
+    },
+    {
+      "title": "Skincare Face Cream",
+      "stock": "In Stock",
+      "total_stock": 60,
+      "price": 30,
+      "discount_price": 25,
+      "discount_percent": 16,
+      "description": "Moisturizing and rejuvenating skincare cream.",
+      "color": "White",
+      "size": ["50ml", "100ml"],
+      "review": [
+        {
+          "user": "Emma Watson",
+          "review": "Feels amazing on the skin!",
+          "rating": 5
+        }
+      ],
+      "images": [
+        "https://media.istockphoto.com/id/160992043/photo/close-up-of-moisturizer-in-jar.jpg?s=612x612&w=0&k=20&c=ulOzLugjRhRTpwlXavbo0q6fZCBqiD_AzojfrGVGUUA=",
+        "https://media.istockphoto.com/id/1331983976/photo/cosmetic-cream-in-a-white-jar-on-a-white-isolated-background.jpg?s=612x612&w=0&k=20&c=3Lxp-hP_cmg_HNy77ssvrmqM9dl-mqoztLJtubeOhQQ=",
+        "https://media.istockphoto.com/id/1403803081/photo/female-hand-holding-moisturizer.jpg?s=612x612&w=0&k=20&c=mqw5h6cNERPnLRalrPBqTVWlozwSGF6bLbJDzc0yc2A="
+      ],
+      "category": "Health & Beauty",
+      "subcategory": "Skincare"
+    }
+  ]
+  
