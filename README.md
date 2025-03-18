@@ -7,7 +7,7 @@ SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seam
 ## 🚀 Key Features
 
 ### 🛍️ For Users::
-- **🛒 Order Without Login :** - Users can place orders without creating an account.
+- **🛒 Order Without Login :** - Users can place orders,add items to cart , wishList without creating an account /  after creating an account .
 - **🔐 Secure Payments :** Integrated Stripe payment gateway for secure transactions.
 - **💬 Real-Time Chat :** Chat functionality between users and admins for support and inquiries.
 - **🔑 JWT Authentication:** Secure user authentication and authorization.
