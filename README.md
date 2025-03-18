@@ -63,6 +63,9 @@ yarn install
 Create a `.env` file in the root directory and add the following values:
 ```env
 VITE_LIVE_LINK=https://smri-server.vercel.app
+```
+```firebaseconfig.js
+Your firbase config code :
 VITE_API_KEY=your_api_key_here
 VITE_AUTH_DOMAIN=your_auth_domain_here
 VITE_PROJECT_ID=your_project_id_here
