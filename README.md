@@ -26,7 +26,13 @@ SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seam
 - **📊 Seller Dashboard :** Sellers can manage their products, orders, and performance.
 - **📦 Order Management:** Sellers can confirm and update order statuses.
 - **📝 Product Management:** Add, update, and delete products with ease.
-
+Test As a Seller.
+```sh
+seller@gmail.com
+```
+```sh
+Seller12@
+```
 ## ⚙️ Technologies Used
 
 - **Frontend:** React, Vite, Tailwind CSS, Material-UI, Framer Motion , Daisy UI
