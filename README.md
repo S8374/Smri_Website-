@@ -1,6 +1,9 @@
 # SMRI Shop - Full-Stack E-Commerce Website
 
 SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seamless shopping experience for users, robust management tools for sellers, and advanced controls for admins. With a sleek UI/UX, secure payments, and real-time interactions, this platform is optimized for SEO-friendly performance and scalability.
+
+🔗 **Live Demo:** [SMRI Shop](https://smrishop.web.app)
+
 ## 🚀 Key Features
 
 ### 🛍️ For Users::
