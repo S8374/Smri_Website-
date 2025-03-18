@@ -21,7 +21,10 @@ SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seam
 - **✅ Seller Management:** Admins can approve, manage, and monitor seller accounts.
 - **📦 Order Processing :** Confirm, track, and manage orders efficiently.
 - **📈 Advanced Analytics :** Static charts and reports using MongoDB aggregation pipelines.
-
+-**Test As a Admin** :
+  ```sh
+contact me for test admin .Because its sensitive
+```
 ### 🏪 For Sellers:
 - **📊 Seller Dashboard :** Sellers can manage their products, orders, and performance.
 - **📦 Order Management:** Sellers can confirm and update order statuses.
