@@ -14,6 +14,9 @@ SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seam
 - **💬 Real-Time Chat :** Chat functionality between users and admins for support and inquiries.
 - **🔑 JWT Authentication:** Secure user authentication and authorization.
 - **📱 Responsive Design :** Optimized for all devices using Tailwind CSS and Material-UI.
+- **Real-Time Chat Support:** Instant messaging between users and admins for support.
+- **Coupon Discounts:** Apply coupons for discounts during checkout.
+- **Comments & Messaging:** Users can comment on products and send messages to admins.
   
 
 ### 🛠️ For Admins:
@@ -29,6 +32,10 @@ contact me for test admin .Because its sensitive
 - **📊 Seller Dashboard :** Sellers can manage their products, orders, and performance.
 - **📦 Order Management:** Sellers can confirm and update order statuses.
 - **📝 Product Management:** Add, update, and delete products with ease.
+- **Message Replies:** Admins can reply to user messages and comments in real-time.
+- **Highest Ordered Products:** Identify top-selling products.
+- **Specific Product Sales:** Track sales performance for individual products.
+- **Total Sales:** Monitor overall sales performance for the website.
 -**Test As a Seller** :
 ```sh
 seller@gmail.com
