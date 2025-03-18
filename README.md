@@ -22,7 +22,7 @@ SMRI Shop is a modern, full-stack e-commerce platform designed to provide a seam
 - **📦 Order Processing :** Confirm, track, and manage orders efficiently.
 - **📈 Advanced Analytics :** Static charts and reports using MongoDB aggregation pipelines.
 -**Test As a Admin** :
-  ```sh
+```sh
 contact me for test admin .Because its sensitive
 ```
 ### 🏪 For Sellers:
