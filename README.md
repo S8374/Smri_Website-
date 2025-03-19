@@ -65,7 +65,7 @@ Ensure you have the following installed:
 
 ### 🔻 Clone the Repository
 ```sh
-git clone https://github.com/your-repo/smri-shop.git
+git clone https://github.com/S8374/Smri_Website-.git
 cd smri-shop
 ```
 
