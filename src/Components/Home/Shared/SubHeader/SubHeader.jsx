@@ -62,7 +62,7 @@ export default function SubHeader() {
 
   return (
     <div
-      className={`px-4 navbar text-black sticky top-16 left-0 max-w-6xl mx-auto right-0 z-20 bg-white py-3 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      className={` px-4 navbar text-black sticky top-16 left-0 mx-auto right-0 z-20 bg-white w-full py-3 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="max-w-7xl py-2.5 mx-auto flex items-center justify-between">
         {/* Left-side navigation items */}

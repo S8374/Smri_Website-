@@ -7,14 +7,10 @@ export default function PaymentUsers() {
     const axiosSecure = useSecure();
     const { user } = useAuth();
     const [payments, setPayments] = useState([]);
-  
-
     // Fetch payment data
     useEffect(() => {
         if (user?.email) {
-            axiosSecure.get(`/api/PaymentData`, {
-                params: { created_Email: user.email } // Pass user.email as created_Email
-            })
+            axiosSecure.get(`/api/PaymentData/${user?.email}`)
             .then(res => {
                 setPayments(res.data.data);
             })
@@ -49,7 +45,7 @@ export default function PaymentUsers() {
             <div className="hidden lg:block overflow-x-auto">
                 <table className="table w-full border border-gray-300">
                     <thead>
-                        <tr className="bg-gray-100">
+                        <tr className="bg-gray-100 dark:text-black">
                             <th>Product</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -61,7 +57,7 @@ export default function PaymentUsers() {
                     </thead>
                     <tbody>
                         {payments.map((payment) => (
-                            <tr key={payment._id} className="border-t border-gray-300">
+                            <tr key={payment._id} className="border-t dark:text-black border-gray-300">
                                 <td className="flex items-center gap-3 p-2">
                                     <img src={payment.productImage} alt={payment.productTitle} className="h-12 w-12 object-cover rounded" />
                                     <span>{payment.productTitle}</span>
@@ -94,7 +90,7 @@ export default function PaymentUsers() {
 
             {/* Mobile Card View */}
             <div className="lg:hidden">
-                <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-1 dark:text-black md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                     {payments.map((payment) => (
                         <div key={payment._id} className="bg-white p-4 rounded-lg shadow-md border border-gray-200">
                             <div className="flex items-center gap-3 mb-4">
@@ -111,9 +107,10 @@ export default function PaymentUsers() {
                                 Status: {payment.status}
                             </p>
 
-                            <div className="mt-4">
+                            <div className="mt-4 dark:text-black">
                                 {payment.status === 'pending' ? (
                                     <Button
+                                    className="dark:text-white dark:bg-black" 
                                         variant="contained"
                                         color="primary"
                                         fullWidth
@@ -122,7 +119,7 @@ export default function PaymentUsers() {
                                         Confirm
                                     </Button>
                                 ) : (
-                                    <Button variant="contained" color="success" fullWidth disabled>
+                                    <Button className="dark:text-white dark:bg-black"  variant="contained" color="success" fullWidth disabled>
                                         Done
                                     </Button>
                                 )}

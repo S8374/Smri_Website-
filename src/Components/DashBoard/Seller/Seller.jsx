@@ -37,7 +37,7 @@ export default function Seller() {
         <>
             {/* Toggle Button (Visible only on mobile) */}
             {isMobile && (
-                <button className="btn ml-8 items-center" onClick={() => setToggled(!toggled)}>
+                <button className="btn ml-8 items-center dark:text-black" onClick={() => setToggled(!toggled)}>
                     <FaBars className='text-xl' />
                 </button>
             )}
@@ -59,7 +59,7 @@ export default function Seller() {
                             {/* Close Button (Visible only on mobile) */}
                             {isMobile && (
                                 <MenuItem className="text-xl font-bold text-center py-6 border-b border-gray-700">
-                                    <button onClick={() => setToggled(false)} className="text-gray-400 float-right btn hover:text-white">
+                                    <button onClick={() => setToggled(false)} className="text-gray-400 float-right dark:text-black btn hover:text-white">
                                         <FaTimes size={20} />
                                     </button>
                                 </MenuItem>
@@ -67,28 +67,28 @@ export default function Seller() {
                         </Menu>
 
                         <Menu>
-                            <MenuItem component={<Link to="/dashboard/seller/SellerPanel" />} className="hover:bg-gray-700 transition duration-200 ease-in-out">
+                            <MenuItem component={<Link to="/dashboard/seller/SellerPanel" />} className="hover:bg-gray-700 dark:text-black  transition duration-200 ease-in-out">
                                 Dashboard
                             </MenuItem>
-                            <SubMenu label="Order" className="hover:bg-gray-700 transition duration-200 ease-in-out">
-                                <MenuItem component={<Link to="/dashboard/seller/CashOnDelivery" />} className="hover:bg-gray-600 transition duration-200 ease-in-out">
+                            <SubMenu label="Order" className="hover:bg-gray-700 dark:text-black transition duration-200 ease-in-out">
+                                <MenuItem component={<Link to="/dashboard/seller/CashOnDelivery" />} className="hover:bg-gray-600 transition dark:text-black duration-200 ease-in-out">
                                     Cash On Delivery
                                 </MenuItem>
-                                <MenuItem component={<Link to="/dashboard/seller/paymentUser" />} className="hover:bg-gray-600 transition duration-200 ease-in-out">
+                                <MenuItem component={<Link to="/dashboard/seller/paymentUser" />} className="hover:bg-gray-600 transition dark:text-black duration-200 ease-in-out">
                                     Payment Order
                                 </MenuItem>
                             </SubMenu>
-                            <SubMenu label="Manage Products" className="hover:bg-gray-700 transition duration-200 ease-in-out">
-                                <MenuItem component={<Link to="/dashboard/seller/sellerProducts" />} className="hover:bg-gray-600 transition duration-200 ease-in-out">
+                            <SubMenu label="Manage Products" className="hover:bg-gray-700 dark:text-black transition duration-200 ease-in-out">
+                                <MenuItem component={<Link to="/dashboard/seller/sellerProducts" />} className="hover:bg-gray-600 transition dark:text-black duration-200 ease-in-out">
                                     My Products
                                 </MenuItem>
-                                <MenuItem component={<Link to="/dashboard/addProducts" />} className="hover:bg-gray-600 transition duration-200 ease-in-out">
+                                <MenuItem component={<Link to="/dashboard/addProducts" />} className="hover:bg-gray-600 dark:text-black transition duration-200 ease-in-out">
                                     Add Products
                                 </MenuItem>
                             </SubMenu>
-                            <SubMenu label="Marketing" className="hover:bg-gray-700 transition duration-200 ease-in-out">
-                                <MenuItem className="hover:bg-gray-600 transition duration-200 ease-in-out">New Offer</MenuItem>
-                                <MenuItem className="hover:bg-gray-600 transition duration-200 ease-in-out">Coupon List</MenuItem>
+                            <SubMenu label="Marketing" className="hover:bg-gray-700 dark:text-black transition duration-200 ease-in-out">
+                                <MenuItem className="hover:bg-gray-600 dark:text-black transition duration-200 ease-in-out">New Offer</MenuItem>
+                                <MenuItem className="hover:bg-gray-600  dark:text-blacktransition duration-200 ease-in-out">Coupon List</MenuItem>
                             </SubMenu>
                         </Menu>
                     </div>
@@ -96,7 +96,7 @@ export default function Seller() {
                     {/* Bottom Menu (Perfectly Aligned to Bottom) */}
                     <div className="mt-auto border-t border-gray-700">
                         <Menu>
-                            <MenuItem component={<Link to="/" />} className="hover:bg-gray-700 transition duration-200 ease-in-out">
+                            <MenuItem component={<Link to="/" />} className="hover:bg-gray-700 transition duration-200 dark:text-black ease-in-out">
                                 Back Home
                             </MenuItem>
                         </Menu>
@@ -104,7 +104,7 @@ export default function Seller() {
                 </Sidebar>
 
                 {/* Main Content */}
-                <div className="flex-1">
+                <div className="flex-1 dark:text-black">
                     <Outlet />
                 </div>
             </div>

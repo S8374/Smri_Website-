@@ -33,7 +33,7 @@ export default function Register() {
             toast.success('Login Succeed')
         } catch (error) {
             // Handle login error (e.g., show an error message)
-            console.error("Login failed", error);
+            // console.error("Login failed", error);
         } finally {
             setIsSubmitting(false);  // Stop loading
         }

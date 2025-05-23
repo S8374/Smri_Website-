@@ -18,7 +18,7 @@ export const UseUsers = () => {
         // Ensure the response data is always an array
         return Array.isArray(res.data.data) ? res.data.data : [res.data.data];
       } catch (error) {
-        console.error("Error fetching userDetails items:", error);
+        // console.error("Error fetching userDetails items:", error);
         return []; // Return empty array on failure
       }
     },

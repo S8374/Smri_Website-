@@ -43,7 +43,7 @@ export default function UserComments({ product, refetch, handleNewComment }) {
 
       }
     } catch (error) {
-      console.error("Error adding comment:", error.response ? error.response.data : error);
+      // console.error("Error adding comment:", error.response ? error.response.data : error);
       toast.error("Failed to add comment");
     } finally {
       setLoading(false);
@@ -73,7 +73,7 @@ export default function UserComments({ product, refetch, handleNewComment }) {
 
       }
     } catch (error) {
-      console.error("Error adding reply:", error.response ? error.response.data : error);
+      // console.error("Error adding reply:", error.response ? error.response.data : error);
       toast.error("Failed to add reply");
     } finally {
       setLoading(false);
@@ -95,7 +95,7 @@ export default function UserComments({ product, refetch, handleNewComment }) {
 
       }
     } catch (error) {
-      console.error("Error updating like/dislike:", error.response ? error.response.data : error);
+      // console.error("Error updating like/dislike:", error.response ? error.response.data : error);
       toast.error(`Failed to ${likeDislike} comment`);
     } finally {
       setLoading(false);

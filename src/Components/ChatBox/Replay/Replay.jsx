@@ -45,7 +45,7 @@ export default function Replay() {
             refreshMassages(); // Refresh messages after sending
             e.target.reset();
         } catch (error) {
-            console.error("Failed to send message:", error);
+            // console.error("Failed to send message:", error);
         } finally {
             setIsSending(false); // Reset loading state
         }

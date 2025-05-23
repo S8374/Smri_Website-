@@ -45,21 +45,21 @@ if(isAdmin === !true){
  return logOut()
 }
   return (
-    <section className="max-w-6xl mx-auto p-8 bg-gradient-to-r from-blue-50 to-blue-100 shadow-lg rounded-xl">
-      <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">🏆 Top Sellers</h2>
+    <section className="max-w-6xl mx-auto p-8 bg-gradient-to-r dark:text-black from-blue-50 to-blue-100 shadow-lg rounded-xl">
+      <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center dark:text-black">🏆 Top Sellers</h2>
 
       {loading ? (
-        <p className="text-center text-gray-500">Loading sellers...</p>
+        <p className="text-center text-gray-500 dark:text-black">Loading sellers...</p>
       ) : error ? (
         <p className="text-center text-red-500">{error}</p>
       ) : sellers.length === 0 ? (
-        <p className="text-center text-gray-500">No sellers found.</p>
+        <p className="text-center text-gray-500 dark:text-black">No sellers found.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sellers.map((seller, index) => (
             <div
               key={seller._id}
-              className="flex items-center justify-between bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out cursor-pointer transform hover:scale-105"
+              className="flex items-center justify-between dark:text-black bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out cursor-pointer transform hover:scale-105"
               onClick={() => handleOpenModal(seller)}
             >
               <div className="flex items-center gap-4">
@@ -69,13 +69,13 @@ if(isAdmin === !true){
                   className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-4 border-indigo-500"
                 />
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold flex text-lg md:text-xl text-gray-900 truncate">
+                  <h3 className="font-semibold flex dark:text-black text-lg md:text-xl text-gray-900 truncate">
                     {seller.username || "Unknown"}
                     <div>{getMedal(index)}</div>
                   </h3>
                   
-                  <p className="text-sm text-gray-600 truncate">{seller.email || "No email provided"}</p>
-                  <p className="text-sm text-gray-500 flex items-center gap-1">
+                  <p className="text-sm text-gray-600 dark:text-black truncate">{seller.email || "No email provided"}</p>
+                  <p className="text-sm text-gray-500 dark:text-black flex items-center gap-1">
                     <FaStar className="text-yellow-500" /> {seller.totalProducts || 0} Products
                   </p>
                 </div>
@@ -87,7 +87,7 @@ if(isAdmin === !true){
       )}
 
       {/* User Chart */}
-      <h2 className="text-2xl font-semibold text-gray-800 mt-12 mb-4 text-center">📊 Seller Rankings</h2>
+      <h2 className="text-2xl font-semibold dark:text-black text-gray-800 mt-12 mb-4 text-center">📊 Seller Rankings</h2>
       <ResponsiveContainer width="100%" height={350}>
         <BarChart data={sellers}>
           <XAxis dataKey="username" />
@@ -107,17 +107,17 @@ if(isAdmin === !true){
                 <img
                   src={selectedUser.profileImage}
                   alt={selectedUser.username}
-                  className="w-24 h-24 rounded-full border-4 border-indigo-500"
+                  className="w-24 h-24 rounded-full border-4 dark:text-black border-indigo-500"
                 />
                 <div>
-                  <p className="text-lg text-gray-700"><strong>Name:</strong> {selectedUser.username}</p>
-                  <p className="text-lg text-gray-700"><strong>Email:</strong> {selectedUser.email}</p>
-                  <p className="text-lg text-gray-700"><strong>Total Products:</strong> {selectedUser.totalProducts}</p>
+                  <p className="text-lg text-gray-700 dark:text-black"><strong>Name:</strong> {selectedUser.username}</p>
+                  <p className="text-lg text-gray-700 dark:text-black"><strong>Email:</strong> {selectedUser.email}</p>
+                  <p className="text-lg text-gray-700 dark:text-black"><strong>Total Products:</strong> {selectedUser.totalProducts}</p>
                 </div>
               </div>
               <div className="modal-action">
                 <form method="dialog">
-                  <button className="btn">Close</button>
+                  <button className="btn dark:text-black">Close</button>
                 </form>
               </div>
             </>

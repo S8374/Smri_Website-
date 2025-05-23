@@ -63,7 +63,7 @@ if(isAdmin === !true){
 }
   return (
     <div>
-      <fieldset className="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+      <fieldset className="fieldset w-xs dark:text-black  bg-base-200 border border-base-300 p-4 rounded-box">
         <legend className="fieldset-legend">Manage Coupon</legend>
         <div className="join">
           <input
@@ -87,7 +87,7 @@ if(isAdmin === !true){
             Save
           </button>
         </div>
-        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+        {error && <p className="text-red-500 dark:text-black text-sm mt-2">{error}</p>}
       </fieldset>
     </div>
   );

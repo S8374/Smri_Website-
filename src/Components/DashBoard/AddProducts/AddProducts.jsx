@@ -86,7 +86,7 @@ export default function AddProducts() {
 
   return (
     <div className="p-4 md:p-6">
-      <h1 className="text-xl md:text-2xl font-semibold mb-4">Add Products Page</h1>
+      <h1 className="text-xl md:text-2xl font-semibold mb-4 dark:text-black">Add Products Page</h1>
 
       <form onSubmit={handleSubmit}>
         {/* Form Fields */}

@@ -35,7 +35,7 @@ export default function SocialLogin() {
             })
             .catch(error => {
                 toast.error("Google login failed!");
-                console.error("Google login error:", error);
+                // console.error("Google login error:", error);
             });
     };
     return (

@@ -122,7 +122,7 @@ export default function AllProduct() {
     };
 
     return (
-        <div className="container text-black barlow mx-auto px-4 py-6">
+        <div className="container text-black barlow mx-auto  py-6">
             <ScrollToTop />
             {/* Header Section */}
             <div className="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-gray-700 to-gray-500 text-black p-8 rounded-lg shadow-md">

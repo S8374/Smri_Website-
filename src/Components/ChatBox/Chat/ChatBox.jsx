@@ -92,7 +92,7 @@ export default function ChatBox({ toggleChat }) {
                 refreshMassages(); // Refresh messages after bot reply
             }, 10000); // 10 seconds delay
         } catch (error) {
-            console.error("Failed to send message:", error);
+            // console.error("Failed to send message:", error);
         } finally {
             setIsSending(false); // Reset loading state
         }

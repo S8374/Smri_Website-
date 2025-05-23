@@ -35,7 +35,7 @@ export default function Root() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto bg-white relative" >
+    <div className=" mx-auto bg-white relative" >
       {/* SEO Optimization */}
       <Helmet>
         <title>Smri Shop - Best Online Store for Fashion & Accessories</title>

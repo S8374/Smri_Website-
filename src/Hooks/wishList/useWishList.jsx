@@ -17,7 +17,7 @@ export const UseWishList = () => {
                 const res = await axiosPublic.get(`/api/wishItems/${userUid}`); // FIXED: Use dynamic URL
                 return res.data.data || []; // Ensure data is always an array
             } catch (error) {
-                console.error("Error fetching wishlist items:", error);
+                // console.error("Error fetching wishlist items:", error);
                 return []; // Return empty array on failure
             }
         },

@@ -13,9 +13,10 @@ import { toast } from "react-hot-toast";
 import Error from "../../Design/Error/Error";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Loader from "../../Loader/Loader";
 
 export default function UserOrder() {
-  const { user , logOut } = useAuth();
+  const { user , logOut ,loading} = useAuth();
   const axiosPublic = usePublic();
   const [orders, setOrders] = useState([]);
   const [payments, setPayments] = useState([]);
@@ -74,6 +75,9 @@ export default function UserOrder() {
       });
     }
   };
+  if(loading){
+    return <Loader/>
+  }
   if(!user){
      logOut();
      nav("/");
@@ -140,14 +144,14 @@ export default function UserOrder() {
                   </span>
                 </p>
                 <p
-                  className={`text-lg ${order.status === "Confirmed"
+                  className={`text-lg ${order.status == "confirmed"
                     ? "text-green-600"
                     : "text-red-500"
                     }`}
                 >
                   <strong>Status:</strong>
-                  {order.status === "Confirmed" ? (
-                    <FaCheckCircle className="inline mr-2" />
+                  {order.status === "confirmed" ? (
+                    <FaCheckCircle className="inline  mr-2" />
                   ) : (
                     <FaTimesCircle className="inline mr-2" />
                   )}
@@ -188,13 +192,13 @@ export default function UserOrder() {
                   </span>
                 </p>
                 <p
-                  className={`text-lg ${payment.status === "Completed"
+                  className={`text-lg ${payment.status === "confirmed"
                     ? "text-green-600"
                     : "text-red-500"
                     }`}
                 >
                   <strong>Status:</strong>
-                  {payment.status === "Completed" ? (
+                  {payment.status === "confirmed" ? (
                     <FaCheckCircle className="inline mr-2" />
                   ) : (
                     <FaTimesCircle className="inline mr-2" />

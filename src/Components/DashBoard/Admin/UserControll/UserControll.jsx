@@ -82,12 +82,12 @@ export default function UserControl() {
     return logOut()
   }
   return (
-    <div className="p-4">
+    <div className="p-4 dark:text-black">
       <h2 className="text-xl font-semibold mb-4">Manage Users Page</h2>
       <div className="hidden md:block overflow-x-auto">
         <table className="table w-full border border-gray-200 rounded-lg shadow-md">
           <thead>
-            <tr className="bg-gray-100 text-gray-700">
+            <tr className="bg-gray-100 dark:text-black text-gray-700">
               <th>#</th>
               <th>Name</th>
               <th>Phone Number</th>
@@ -96,21 +96,21 @@ export default function UserControl() {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="dark:text-black">
             {Users.map((user, index) => (
-              <tr key={user._id} className="hover:bg-gray-100">
+              <tr key={user._id} className="hover:bg-gray-100 dark:text-black">
                 <td>{index + 1}</td>
                 <td className="flex items-center gap-3">
                   <img src={user.profileImage || "https://img.daisyui.com/images/profile/demo/2@94.webp"} alt="Avatar" className="w-10 h-10 rounded-full" />
                   <div>
-                    <div className="font-bold">{user.username}</div>
-                    <div className="text-sm opacity-50">{user.email || "Unknown Location"}</div>
+                    <div className="font-bold dark:text-black">{user.username}</div>
+                    <div className="text-sm opacity-50 dark:text-black">{user.email || "Unknown Location"}</div>
                   </div>
                 </td>
                 <td>{user.phone || "Not Provided"}</td>
                 <td>{user.statusRequest || "No"}</td>
                 <td>{user.role || "No Role Assigned"}</td>
-                <td className="flex gap-2">
+                <td className="flex gap-2 dark:text-black">
                   <Button variant="contained" color="error" size="small" onClick={() => handleDelete(user._id)}>
                     Delete
                   </Button>
@@ -128,20 +128,20 @@ export default function UserControl() {
 
       <div className="md:hidden flex flex-col gap-4">
         {Users.map((user, index) => (
-          <div key={user._id} className="bg-white shadow-lg p-4 rounded-lg border border-gray-200">
+          <div key={user._id} className="bg-white dark:text-black shadow-lg p-4 rounded-lg border border-gray-200">
             <div className="flex items-center gap-3">
               <img src={user.profileImage || "https://img.daisyui.com/images/profile/demo/2@94.webp"} alt="Avatar" className="w-14 h-14 rounded-full" />
               <div>
                 <h3 className="font-bold text-lg">{user.username}</h3>
-                <p className="text-sm text-gray-500">{user.email || "Unknown Location"}</p>
-                <p className="text-sm text-gray-500">{user.phone || "Not Provided"}</p>
+                <p className="text-sm text-gray-500 dark:text-black">{user.email || "Unknown Location"}</p>
+                <p className="text-sm text-gray-500 dark:text-black">{user.phone || "Not Provided"}</p>
               </div>
             </div>
             <div className="mt-4">
-              <p className="text-gray-700 font-semibold">Status: <span className="text-gray-500">{user.statusRequest || "No"}</span></p>
-              <p className="text-gray-700 font-semibold">Role: <span className="text-gray-500">{user.role || "No Role Assigned"}</span></p>
+              <p className="text-gray-700 dark:text-black font-semibold">Status: <span className="text-gray-500 dark:text-black">{user.statusRequest || "No"}</span></p>
+              <p className="text-gray-700 font-semibold dark:text-black">Role: <span className="text-gray-500 dark:text-black">{user.role || "No Role Assigned"}</span></p>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 mt-4 dark:text-black">
               <Button variant="contained" color="error" size="small" fullWidth onClick={() => handleDelete(user._id)}>
                 Delete
               </Button>

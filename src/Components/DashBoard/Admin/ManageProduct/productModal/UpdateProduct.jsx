@@ -70,11 +70,11 @@ export default function UpdateProduct({ selectedProduct }) {
   };
 
   return (
-    <dialog id="my_modal_2" className="modal">
-      <div className="modal-box">
+    <dialog id="my_modal_2" className="modal dark:text-black">
+      <div className="modal-box dark:text-black">
         {selectedProduct ? (
           <>
-            <h3 className="font-bold text-lg">Update Product</h3>
+            <h3 className="font-bold text-lg ">Update Product</h3>
             <form onSubmit={handleSubmit}>
               <label className="block my-2 font-semibold">Title:</label>
               <input

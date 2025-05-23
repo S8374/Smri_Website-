@@ -11,7 +11,7 @@ export default function CashOnDelivery() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { user } = useAuth();
-
+  
     // Fetch orders on component mount or when user email changes
     useEffect(() => {
         if (user?.email) {
@@ -83,49 +83,49 @@ export default function CashOnDelivery() {
 
     return (
         <div className="p-6 bg-gray-50 min-h-screen">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Cash On Delivery Orders</h2>
+            <h2 className="text-2xl font-semibold mb-6 dark:text-black text-gray-800">Cash On Delivery Orders</h2>
 
             {/* Desktop View - Table Layout */}
-            <div className="hidden md:block overflow-x-auto bg-white rounded-lg shadow-md">
+            <div className="hidden md:block overflow-x-auto bg-white dark:text-black  rounded-lg shadow-md">
                 <table className="w-full border-collapse">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-gray-100 dark:text-black">
                         <tr>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">#</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Customer</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Product</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Quantity</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Total</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Status</th>
-                            <th className="p-3 text-left text-xs font-medium text-gray-600 uppercase">Action</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">#</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Customer</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Product</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Quantity</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Total</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Status</th>
+                            <th className="p-3 text-left text-xs font-medium dark:text-black text-gray-600 uppercase">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {orders.length > 0 ? (
                             orders.map((order, index) => (
                                 <tr key={order._id} className="border-b hover:bg-gray-50 transition-colors">
-                                    <td className="p-3 text-sm text-gray-700">{index + 1}</td>
+                                    <td className="p-3 text-sm dark:text-black text-gray-700">{index + 1}</td>
                                     <td className="p-3">
-                                        <p className="text-sm font-medium text-gray-900">{order.user.name}</p>
-                                        <p className="text-xs text-gray-500">{order.user.email}</p>
+                                        <p className="text-sm font-medium dark:text-black text-gray-900">{order?.user?.name || 'Guest User'}</p>
+                                        <p className="text-xs dark:text-black text-gray-500">{order?.user?.email || order?.email}</p>
                                     </td>
                                     <td className="p-3">
-                                        <div className="flex items-center gap-3">
+                                        <div className="flex items-center gap-3 dark:text-black">
                                             <img
                                                 src={order.productImage}
                                                 alt={order.productTitle}
                                                 className="w-10 h-10 rounded-md object-cover"
                                             />
-                                            <p className="text-sm text-gray-900">{order.productTitle}</p>
+                                            <p className="text-sm dark:text-black text-gray-900">{order.productTitle}</p>
                                         </div>
                                     </td>
-                                    <td className="p-3 text-sm text-gray-700">{order.quantity}</td>
-                                    <td className="p-3 text-sm text-gray-700">${order.price}</td>
+                                    <td className="p-3 text-sm dark:text-black text-gray-700">{order.quantity}</td>
+                                    <td className="p-3 text-sm dark:text-black text-gray-700">${order.price}</td>
                                     <td className="p-3">
                                         <span
                                             className={`px-2 py-1 text-xs font-semibold rounded-full ${
                                                 order.status === "Confirmed"
-                                                    ? "bg-green-100 text-green-700"
-                                                    : "bg-red-100 text-red-700"
+                                                    ? "bg-green-100 dark:text-black text-green-700"
+                                                    : "bg-red-100 dark:bg-black dark:text-white text-red-700"
                                             }`}
                                         >
                                             {order.status}
@@ -134,7 +134,7 @@ export default function CashOnDelivery() {
                                     <td className="p-3">
                                         {order.status === "pending" && (
                                             <button
-                                                className="px-3 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                                                className="px-3 py-1 dark:text-white dark:bg-black bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
                                                 onClick={() => handleConfirm(order._id)}
                                             >
                                                 Confirm
@@ -145,7 +145,7 @@ export default function CashOnDelivery() {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="7" className="text-center py-6 text-gray-500">
+                                <td colSpan="7" className="text-center dark:text-black py-6 text-gray-500">
                                     No orders found.
                                 </td>
                             </tr>
@@ -158,40 +158,40 @@ export default function CashOnDelivery() {
             <div className="md:hidden space-y-4">
                 {orders.length > 0 ? (
                     orders.map((order, index) => (
-                        <div key={order._id} className="p-4 bg-white rounded-lg shadow-md">
+                        <div key={order._id} className="p-4 dark:text-black bg-white rounded-lg shadow-md">
                             <div className="flex justify-between items-center">
-                                <h3 className="font-bold text-gray-900">Order #{index + 1}</h3>
+                                <h3 className="font-bold dark:text-black text-gray-900">Order #{index + 1}</h3>
                                 <span
                                     className={`px-2 py-1 text-xs font-semibold rounded-full ${
                                         order.status === "Confirmed"
-                                            ? "bg-green-100 text-green-700"
-                                            : "bg-red-100 text-red-700"
+                                            ? "bg-green-100 text-green-700 dark:text-black"
+                                            : "bg-red-100 text-red-700 dark:text-black"
                                     }`}
                                 >
                                     {order.status}
                                 </span>
                             </div>
                             <div className="mt-2">
-                                <p className="text-sm text-gray-900">
-                                    <strong>Customer:</strong> {order.user.name}
+                                <p className="text-sm text-gray-900 dark:text-black">
+                                    <strong>Customer:</strong> {order?.user?.name || 'Guest User'}
                                 </p>
-                                <p className="text-xs text-gray-500">{order.user.email}</p>
+                                <p className="text-xs dark:text-black text-gray-500">{order?.user?.email || order?.email}</p>
                             </div>
-                            <div className="flex gap-3 mt-3">
+                            <div className="flex gap-3 mt-3 ">
                                 <img
                                     src={order.productImage}
                                     alt={order.productTitle}
                                     className="w-16 h-16 rounded-md object-cover"
                                 />
                                 <div>
-                                    <p className="font-bold text-gray-900">{order.productTitle}</p>
-                                    <p className="text-xs text-gray-700">Quantity: {order.quantity}</p>
-                                    <p className="text-xs text-gray-700">Total: ${order.price}</p>
+                                    <p className="font-bold text-gray-900 dark:text-black">{order.productTitle}</p>
+                                    <p className="text-xs text-gray-700 dark:text-black">Quantity: {order.quantity}</p>
+                                    <p className="text-xs text-gray-700 dark:text-black">Total: ${order.price}</p>
                                 </div>
                             </div>
-                            {order.status === "Pending" && (
+                            {order.status === "pending" && (
                                 <button
-                                    className="mt-3 w-full px-4 py-2 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                                    className="mt-3 w-full px-4 py-2 bg-blue-500 dark:text-white dark:bg-black text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
                                     onClick={() => handleConfirm(order._id)}
                                 >
                                     Confirm Order
@@ -200,7 +200,7 @@ export default function CashOnDelivery() {
                         </div>
                     ))
                 ) : (
-                    <p className="text-center text-gray-500">No orders found.</p>
+                    <p className="text-center dark:text-black text-gray-500">No orders found.</p>
                 )}
             </div>
         </div>

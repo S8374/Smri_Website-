@@ -13,23 +13,35 @@ import { useState } from "react";
 
 export default function Main() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  
 
   return (
-    <div className="space-y-8">
-        
-      <div className="flex ">
+    <div className="space-y-8 mx-auto">
+      <div className="flex  ">
         <div>
           <SideBarCategory setSelectedCategory={setSelectedCategory} />
         </div>
         <SliderHero />
       </div>
       <FlashSale selectedCategory={selectedCategory} />
-      <ItemsCategory selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      <ItemsCategory
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <Products selectedCategory={selectedCategory} />
       <Baner />
-      <Products  selectedCategory={selectedCategory} />
+
       <ImageGrid />
-      <Features icon1={<CiDeliveryTruck />} title1={'FREE AND FAST DELIVERY'} details1={'Free delivery for all orders over $140'} icon2={<SiAudiobookshelf />} title2={'24/7 CUSTOMER SERVICE'} details2={'Friendly 24/7 customer support'} icon3={<CiCircleCheck />} title3={'MONEY BACK GUARANTEE'} details3={'We reurn money within 30 days'} />
+      <Features
+        icon1={<CiDeliveryTruck />}
+        title1={"FREE AND FAST DELIVERY"}
+        details1={"Free delivery for all orders over $140"}
+        icon2={<SiAudiobookshelf />}
+        title2={"24/7 CUSTOMER SERVICE"}
+        details2={"Friendly 24/7 customer support"}
+        icon3={<CiCircleCheck />}
+        title3={"MONEY BACK GUARANTEE"}
+        details3={"We reurn money within 30 days"}
+      />
     </div>
-  )
+  );
 }
